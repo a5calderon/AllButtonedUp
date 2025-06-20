@@ -1,0 +1,47 @@
+.mountains-of-christmas-regular {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --main-font: "Mountains of Christmas", serif; 
+  --fontColor:rgb(227, 129, 146);  
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(251, 242, 243);
+  font-family: var(--main-font);
+  color: var(--fontColor);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+h1{
+  font-size: 4rem;
+  
+}
+
+.drawnButton{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  gap: 0; 
+  padding:0;
+  
+}
+.drawnButton img{
+  filter: drop-shadow(rgb(165, 156, 136) 8px 4px 6px);
+}
+
+.drawnButton:hover{
+  transform: translateY(6px);
+}
