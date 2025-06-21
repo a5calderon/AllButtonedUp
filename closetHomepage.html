@@ -9,7 +9,8 @@
   <body>
     <main>
     <h1>Pick your outfit!</h1>
-    <div class="fullBody">
+
+    <div class="fullScene">
       <img src="images/buttons/buttonBear.png" class = "controlButtons" id = "confirmButton" alt="Bear Shaped button" width = "150" height="120 ">
       <img src="images/buttons/buttonFlower.png" class = "controlButtons" id = "forwardButton" alt="Flower Shaped button" width = "150" height="120 ">
       
@@ -19,10 +20,22 @@
       </div>
 
       <img src="images/buttons/buttonBlue.png" class = "controlButtons" id = "backButton" alt="Blue button" width = "220" height="160 ">
+
+      <nav class="category-nav">
+        <ul id="nav">
+          <li><button class="category-btn active" data-category="hair">Hair</button></li>
+          <li><button class="category-btn" data-category="mouth">Mouth</button></li>
+          <li><button class="category-btn" data-category="accessories">Accessories</button></li>
+          <li><button class="category-btn" data-category="shirts">Shirts</button></li>
+          <li><button class="category-btn" data-category="pants">Pants</button></li>
+          <li><button class="category-btn" data-category="dresses">One Piece</button></li>
+          <li><button class="category-btn" data-category="socks">Socks</button></li>
+          <li><button class="category-btn" data-category="shoes">Shoes</button></li>
+        </ul>
+      </nav>
+
     </div>
-
-
-
+    
     </main>
     <script type="module" src="index.js"></script>
   </body>

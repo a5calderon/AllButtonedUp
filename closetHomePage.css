@@ -7,7 +7,6 @@
     --main-font: "Mountains of Christmas", serif; 
     --fontColor:rgb(227, 129, 146);  
 }
-
 html, body {
     margin: 0;
     padding: 0;
@@ -23,10 +22,9 @@ main {
    
 }
 h1{
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 0rem;
 }
-
 .imgWrap{
     transform: translateX(15rem);
     transform: translatey(4rem);
@@ -45,8 +43,8 @@ h1{
 }
 .girl {
     z-index: 2; 
-    left: -7rem;
-    width: 69rem; 
+    left: -8.3rem;
+    width: 72rem; 
     height: 55rem;
     transform: translateY(-8rem);
   
@@ -69,11 +67,50 @@ h1{
     transform: translate(12rem, 14.7rem);
 }
 #confirmButton{
-    z-index:3;
+    z-index:;
     transform: translate(45rem, -6rem);
 }
 #confirmButton:hover{
-    position: absolute;
+    transform: translate(45rem, -6rem) translateY(4rem);
+}
+.category-nav {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 50px;
+    margin: 1rem auto;
+    max-width: 100%;
+    overflow-x: auto;
     z-index:2;
-    transform: translate(45rem, -5.6rem);
+    transform: translateY(-14rem);
+}
+#nav {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.category-btn {
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 30px;
+    background: #f8d7e6;
+    color: #c25a7c;
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+.category-btn:hover {
+    background: #e6a8c8;
+    transform: translateY(-2px);
+}
+.category-btn.active {
+    background: #c25a7c;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(194, 90, 124, 0.3);
 }
