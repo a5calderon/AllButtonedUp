@@ -36,7 +36,6 @@ const confirmButton = document.getElementById('confirmButton');
 
 const categoryButtons = document.querySelectorAll('.category-btn');
 
-// Category selection logic
 categoryButtons.forEach(button => {
     button.addEventListener('click', () => {
         categoryButtons.forEach(btn => btn.classList.remove('active'));
@@ -47,29 +46,42 @@ categoryButtons.forEach(button => {
     });
 });
 
-// Next item
 forwardButton.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % items[currentCategory].length;
     updateImage();
 });
 
-// Previous item
+
 backButton.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + items[currentCategory].length) % items[currentCategory].length;
     updateImage();
 });
 
-// Confirm button
 confirmButton.addEventListener('click', () => {
-    console.log(`Confirmed: ${items[currentCategory][currentIndex]}`);
+    const navBar = document.querySelector('.category-nav');
+    if (navBar) {
+        navBar.style.display = 'none';
+    }
+    if (backButton) {
+        backButton.style.display = 'none';
+    }
+    if (forwardButton) {
+        forwardButton.style.display = 'none';
+    }
+    if (confirmButton) {
+        confirmButton.style.display = 'none';
+    }
+
+    const pageTitle = document.querySelector('h1');
+    if (pageTitle) {
+        pageTitle.textContent = "Today's Fit";
+    }
 });
 
-// Update the displayed image
 function updateImage() {
     const imagePath = items[currentCategory][currentIndex];
     categoryImages[currentCategory].src = imagePath;
 
-    // Handle one-piece logic: Hide shirts and bottoms if wearing a one-piece
     if (currentCategory === 'dresses') {
         categoryImages.shirts.src = '';
         categoryImages.pants.src = '';
