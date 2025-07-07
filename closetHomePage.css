@@ -42,7 +42,8 @@ h1{
     height: 100%;
 }
 .girl {
-    z-index: 2; 
+    position: absolute;
+    z-index: 1; 
     left: -8.3rem;
     width: 72rem; 
     height: 55rem;
@@ -67,7 +68,7 @@ h1{
     transform: translate(12rem, 14.7rem);
 }
 #confirmButton{
-    z-index:;
+    z-index:2;
     transform: translate(45rem, -6rem);
 }
 #confirmButton:hover{
@@ -100,9 +101,8 @@ h1{
     color: #c25a7c;
     font-family: 'Mountains of Christmas', cursive;
     font-size: 1.1rem;
-    cursor: pointer;
     transition: all 0.3s ease;
-    white-space: nowrap;
+
 }
 .category-btn:hover {
     background: #e6a8c8;
@@ -113,4 +113,37 @@ h1{
     color: white;
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(194, 90, 124, 0.3);
+}
+
+.layer {
+    position: absolute;
+    top: -8.1rem;
+    left: -8.3rem;
+    width: 72rem; 
+    height: 55rem;
+}
+.layer.hair{
+    z-index: 0;
+}
+.layer.mouth{
+    z-index: 3;
+    top: -7.9rem;
+}
+.layer.accessories{
+    z-index: 2;
+}
+.layer.shirts{
+    z-index: 4;
+}
+.layer.pants{
+    z-index:3;
+}
+.layer.dresses{
+    z-index: 2;
+}
+.layer.socks{
+    z-index: 1;
+}
+.layer.shoes{
+    z-index: 2;
 }
